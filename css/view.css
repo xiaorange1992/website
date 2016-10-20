@@ -1,0 +1,303 @@
+body,html{
+	width: 100%;
+	height: 100%;
+}
+.view_wrapper{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: #52b8e0;
+}
+#view_content{
+	width:1000px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+#my_pic{
+	width: 140px;
+	height: 140px;
+	background: url(http://i1.piimg.com/4851/b381de074d093f96.jpg);
+	background-size: cover;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -70px;
+	margin-top: -100px;
+	animation:  2s ani3 forwards 3s;
+}
+#view_box{
+	width: 40%;
+	height: 40%;
+	background: white;
+	position: absolute;
+	left: 30%;
+	top: 30%;
+	border-radius: 10px;
+	animation:  2s ani2 forwards 3s;
+	overflow: hidden;
+	border: 1px soild black;
+}
+#welcome{
+	width: 0;
+	height: 30px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 20%;
+	text-indent: 2em;
+	line-height: 30px;
+	font-size: 26px;
+	animation: 3s ani1;
+}
+#info1{
+	width: 100%;
+	height: 50%;
+	line-height: 36px;
+	font-size: 16px;
+	text-align: center;
+	position: absolute;
+	bottom: -50%;
+	animation: 2s ani4 forwards 5s;
+}
+.pinfo{
+	width: 100%;
+	height: 50%;
+	line-height: 36px;
+	font-size: 16px;
+	text-align: center;
+	position: absolute;
+	bottom: -50%;
+}
+#switch{
+	width: 40px;
+	height: 24px;
+	background: black;
+	border-radius: 30px;
+	position: absolute;;
+	right: 3%;
+	top: 3%;
+	transition: all .7s
+}
+#sw_on{
+	width: 24px;
+	height: 24px;
+	background: white;
+	border-radius: 50%;
+	cursor: pointer;
+}
+#menu>div{
+	opacity: 0;
+	position: absolute;
+	top: 45%;
+	left: 5%;
+	/*width: 40px;*/
+	height: 40px;
+
+	/*animation: 1s ani5 forwards 5s;*/
+	transform-origin: -200px center;
+	cursor: pointer;
+}
+#menu>div>div{
+	width: 230px;
+}
+#menu>div>div:hover{
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 0 0 1px 1px black;
+}
+#menu>div>div>span{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: red;
+	float: left;
+	margin-right: 6px;
+}
+#menu>div>div>p{
+	float: left;
+	opacity: 0;
+	animation: 1s op forwards 7s;
+}
+.menu1{
+	animation: 2s m1 forwards 6s;
+	z-index: 2;
+}
+.menu1>div{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+	animation: 2s s1 forwards 6s;
+}
+.menu2{
+	animation: 2s m2 forwards 6s;
+}
+.menu2>div{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+	animation: 2s s2 forwards 6s;
+}
+.menu3{
+	animation: 2s m3 forwards 6s;
+}
+.menu3>div{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+	animation: 2s s3 forwards 6s;
+}
+.menu4{
+	animation: 2s m4 forwards 6s;
+}
+.menu4>div{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+	animation: 2s s4 forwards 6s;
+}
+.menu5{
+	animation: 2s m5 forwards 6s;
+}
+.menu5>div{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+	animation: 2s s5 forwards 6s;
+}
+@keyframes ani1{
+	99%{
+		width: 100%;
+	}
+	100%{
+		width: 0;
+	}
+}
+@keyframes ani2{
+	to{
+		left: 60%;
+	}
+}
+@keyframes ani3{
+	to{
+		left: 0;
+		margin-left: 0;
+	}
+}
+@keyframes ani4{
+	to{
+		bottom: 20%;
+	}
+}
+@keyframes ani5{
+	to{
+		left: 20%;
+		opacity: 1;
+	}
+}
+@keyframes m1{
+	50%{
+		left: 22%;
+		opacity: 1;	
+		transform: rotateZ(0);
+	}
+	100%{
+		left: 22%;
+		opacity: 1;	
+		transform: rotateZ(-60deg);	
+		
+	}
+}
+@keyframes m2{
+	50%{
+		left: 22%;
+		opacity: 1;	
+		transform: rotateZ(0);
+	}
+	100%{
+		left: 22%;
+		opacity: 1;	
+		transform: rotateZ(-30deg);	
+		
+	}
+}
+@keyframes m3{
+	50%{
+		left: 22%;
+		opacity: 1;	
+		transform: rotateZ(0);
+	}
+	100%{
+		left: 22%;
+		opacity: 1;	
+		transform: rotateZ(-0deg);	
+		
+	}
+}
+@keyframes m4{
+	50%{
+		left: 22%;
+		opacity: 1;	
+		transform: rotateZ(0);
+	}
+	100%{
+		left: 22%;
+		opacity: 1;	
+		transform: rotateZ(30deg);	
+		
+	}
+}
+@keyframes m5{
+	50%{
+		left: 22%;
+		opacity: 1;	
+		transform: rotateZ(0);
+	}
+	100%{
+		left: 22%;
+		opacity: 1;	
+		transform: rotateZ(60deg);	
+		
+	}
+}
+@keyframes s1{
+	to{
+		transform: rotateZ(60deg);	
+		
+	}
+}
+@keyframes s2{
+	to{
+		transform: rotateZ(30deg);	
+		
+	}
+}
+@keyframes s3{
+	to{
+		transform: rotateZ(0deg);	
+		
+	}
+}
+@keyframes s4{
+	to{
+		transform: rotateZ(-30deg);	
+		
+	}
+}
+@keyframes s5{
+	to{
+		transform: rotateZ(-60deg);	
+		
+	}
+}
+@keyframes op{
+	to{
+		opacity: 1;
+	}
+}

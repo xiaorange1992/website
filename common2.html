@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src='js/common.js'></script>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<dir class="container">
+			<div class="tv">
+				<div class="tv_inner">
+					<div class="tv_head"></div>
+					<div class="tv_name">赵景然</div>
+					<div class="my_icon">
+						<div class="icon_school">
+							<div class="icon_school_img icon_img"></div>
+							<div class="text text1">
+								<p>
+									毕业院校
+									<br>
+									江苏大学
+								</p>
+							</div>
+						</div>
+						<div class="icon_grade">
+							<div class="icon_grade_img icon_img"></div>
+							<div class="text text2">
+								<p>
+									下载简历
+									<br>
+									我的简历
+								</p>
+							</div>
+						</div>
+						<div class="icon_location">
+							<div class="icon_location_img icon_img"></div>
+							<div class="text text3">
+								<p>
+									期待坐标
+									<br>
+									上海&&南京
+								</p>
+							</div>
+						</div>
+						<div class="icon_job">
+							<div class="icon_job_img icon_img"></div>
+							<div class="text text4">
+								<p>
+									应聘岗位
+									<br>
+									前端工程师
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="tv_skill">
+						<div class="skill1">
+							<div class="html5 more_skill">html5</div>
+							<div class="css3 more_skill">css3</div>
+						</div>
+						<div class="skill2">
+							<div class="responsive  more_skill">响应式</div>
+							<div class="mobile more_skill">移动端</div>
+						</div>
+						<div class="skill3">
+							<div class="js more_skill">JavaScript</div>
+							<div class="jq more_skill">jQuery</div>
+						</div>
+						<div class="skill4">
+							<div class="aj more_skill">Ajax</div>
+							<div class="http more_skill">HTTP</div>
+							<div class="bt more_skill">Bootstrap</div>
+						</div>
+						<div class="skill4">
+							<div class="ps more_skill">photoshop</div>
+							<div class="ai more_skill">网站运营</div>
+						</div>
+						<div class="skill4">
+							<div class="seo more_skill">SEO</div>
+							<div class="wow more_skill">为了联盟</div>
+						</div>
+					</div>
+
+					
+					<div class="tv_my_programes">
+						<h3>项目经验</h3>
+						<h4>智能家居</h4>
+						<dl>
+							<dt>项目职责</dt>
+							<dd>移动端页面布局，实现页面交互效果</dd>
+							<dd>市场推广</dd>
+						</dl>					
+
+						<h4>个人show站</h4>
+						<dl>
+							<dt>项目职责</dt>
+							<dd>运用CSS3家html实现页面布局</dd>
+							<dd>运用原生js实现一些动态效果的展示</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="tv_side" id="tv_side">
+					<div id="data" class="active">查看资料</div>
+					<div id="skill">技能树</div>
+					<div id="course">前端之路</div>
+					<div id="about">关于我</div>
+				</div>
+			</div>
+		<div class="right_side">
+			<div class="talk">
+				现在和我聊聊？
+				<div class="flash1"></div>
+				<div class="flash2"></div>
+				<div class="flash3"></div>
+				<div class="flash4"></div>
+			</div>
+			<div class="works">	
+				<ul>
+					<li>更</li>
+					<li>多</li>
+					<li>作</li>
+					<li>品</li>
+					<li>展</li>
+					<li>示</li>
+					<li>←</li>
+				</ul>
+			</div>
+			<div class="contact">
+				<p>
+					联系我
+					<br>
+					<span>787196777@qq.com</span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		var oSide=document.getElementById('tv_side');
+		var oDiv=oSide.getElementsByTagName('div');
+		var oData=oSide.getElementsByTagName('div')[0];
+		var oSkill=oSide.getElementsByTagName('div')[1];
+		var oCourse=oSide.getElementsByTagName('div')[2];
+		var oAb=oSide.getElementsByTagName('div')[3];
+		var oIcon=document.getElementsByClassName('my_icon')[0];
+		var oText=document.getElementsByClassName('text');
+		var oText1=document.getElementsByClassName('text1')[0];
+		var oText2=document.getElementsByClassName('text2')[0];
+		var oText3=document.getElementsByClassName('text3')[0];
+		var oText4=document.getElementsByClassName('text4')[0];
+		var  oName=document.getElementsByClassName('tv_name')[0];
+		var oHead=document.getElementsByClassName('tv_head')[0];
+		var oTvSkill=document.getElementsByClassName('tv_skill')[0];
+		var oMs=document.getElementsByClassName('more_skill');
+		var oIconImg=document.getElementsByClassName('icon_img');
+		var oMP=document.getElementsByClassName('tv_my_programes')[0];
+		var index=0;
+		//tv_side
+		for (var i = oDiv.length - 1; i >= 0; i--) {
+			oDiv[i].onclick=function(){
+				for (var i = oDiv.length - 1; i >= 0; i--) {
+					oDiv[i].className='';
+				}
+				this.className='active';
+			}
+		}
+		//tv_side_data
+		oData.onclick=function(){
+			oMP.style.bottom='-100%';
+			for (var i = oMs.length - 1; i >= 0; i--) {
+				oMs[i].style.opacity=0;
+			}
+			for (var i = oIconImg.length - 1; i >= 0; i--) {
+				oIconImg[i].style.opacity=1;
+			}
+			//oTvSkill.style.visibility='hidden';
+			oIcon.style.opacity=1;
+			for (var i = oText.length - 1; i >= 0; i--) {
+				oText[i].style.marginLeft='25px';
+				oText[i].style.marginTop='10px';
+			}
+			oHead.style.transform='scale(1)';
+			oHead.style.left='50%';
+			oHead.style.marginLeft='-60px';
+			oName.style.left='50%';
+			oName.style.top='42%';
+			oName.style.marginLeft='-60px';
+			for (var i = oDiv.length - 1; i >= 0; i--) {
+				for (var i = oDiv.length - 1; i >= 0; i--) {
+					oDiv[i].className='';
+				}
+				oData.className='active';
+			}
+		}
+		//tv_side_skill
+		oSkill.onclick=function(){
+			oSkill.style.display='block';
+			oMP.style.bottom='-100%';
+			for (var i = oMs.length - 1; i >= 0; i--) {
+				index=rnd(1,500);
+				oMs[i].style.opacity=1;
+				oMs[i].style.transitionDelay=`${index}ms`;
+			}
+			for (var i = oIconImg.length - 1; i >= 0; i--) {
+				oIconImg[i].style.opacity=0;
+			}
+			oIconImg[0].style.opacity=0;
+			oText[1].style.opacity=1;
+			oText
+			for (var i = oText.length - 1; i >= 0; i--) {
+				oText[i].style.visibility='visible';
+			}
+			oText1.style.marginTop='-130px';
+			oText1.style.marginLeft='-0px';
+			oText2.style.marginTop='-90px';
+			oText2.style.marginLeft='-153px';
+			oText3.style.marginTop='-50px';
+			oText3.style.marginLeft='-307px';
+			oText4.style.marginTop='-10px';
+			oText4.style.marginLeft='-462px';
+			oName.style.left=0;
+			oName.style.top='120px';
+			oName.style.margin=0;
+			oHead.style.left=0;
+			oHead.style.margin=0;
+			oHead.style.transform='scale(0.7)';
+			for (var i = oDiv.length - 1; i >= 0; i--) {
+				for (var i = oDiv.length - 1; i >= 0; i--) {
+					oDiv[i].className='';
+				}
+				oSkill.className='active';
+			}
+		}
+		oCourse.onclick=function(){
+			for (var i = oMs.length - 1; i >= 0; i--) {
+				oMs[i].style.opacity=0;
+			}
+			for (var i = oIconImg.length - 1; i >= 0; i--) {
+				oIconImg[i].style.opacity=0;
+			}
+			oIconImg[0].style.opacity=0;
+			oText[1].style.opacity=1;
+			oText
+			for (var i = oText.length - 1; i >= 0; i--) {
+				oText[i].style.visibility='visible';
+			}
+			oText1.style.marginTop='-130px';
+			oText1.style.marginLeft='-0px';
+			oText2.style.marginTop='-90px';
+			oText2.style.marginLeft='-153px';
+			oText3.style.marginTop='-50px';
+			oText3.style.marginLeft='-307px';
+			oText4.style.marginTop='-10px';
+			oText4.style.marginLeft='-462px';
+			oName.style.left=0;
+			oName.style.top='120px';
+			oName.style.margin=0;
+			oHead.style.left=0;
+			oHead.style.margin=0;
+			oHead.style.transform='scale(0.7)';
+			for (var i = oDiv.length - 1; i >= 0; i--) {
+				for (var i = oDiv.length - 1; i >= 0; i--) {
+					oDiv[i].className='';
+				}
+				oCourse.className='active';
+			}
+			for (var i = oMs.length - 1; i >= 0; i--) {
+				oMs[i].style.opacity=0;
+			}
+			oMP.style.bottom='-15%';
+		}
+		oAb.onclick=function(){
+			oSkill.style.display='block';
+			oMP.style.bottom='-100%';
+			for (var i = oMs.length - 1; i >= 0; i--) {
+				index=rnd(1,500);
+				oMs[i].style.opacity=0;
+			}
+			for (var i = oIconImg.length - 1; i >= 0; i--) {
+				oIconImg[i].style.opacity=0;
+			}
+			oIconImg[0].style.opacity=0;
+			oText[1].style.opacity=1;
+			oText
+			for (var i = oText.length - 1; i >= 0; i--) {
+				oText[i].style.visibility='visible';
+			}
+			oText1.style.marginTop='-130px';
+			oText1.style.marginLeft='-0px';
+			oText2.style.marginTop='-90px';
+			oText2.style.marginLeft='-153px';
+			oText3.style.marginTop='-50px';
+			oText3.style.marginLeft='-307px';
+			oText4.style.marginTop='-10px';
+			oText4.style.marginLeft='-462px';
+			oName.style.left=0;
+			oName.style.top='120px';
+			oName.style.margin=0;
+			oHead.style.left=0;
+			oHead.style.margin=0;
+			oHead.style.transform='scale(0.7)';
+			for (var i = oDiv.length - 1; i >= 0; i--) {
+				for (var i = oDiv.length - 1; i >= 0; i--) {
+					oDiv[i].className='';
+				}
+				oAb.className='active';
+			}		
+		}
+	</script>
+</body>
+</html>
